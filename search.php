@@ -19,9 +19,9 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
 <?php
  
 $Department=$_POST['n3'];
-$con=mysqli_connect("localhost","root","","test");
+ $conn=mysqli_connect("sql202.epizy.com","epiz_29875343","x4ZH4zkcoTnab7G","epiz_29875343_test");
 $qry="SELECT Name,Phonenumber,Department,Address,Time,Photo FROM business_directory WHERE Department in('$Department')";
-$result=mysqli_query($con,$qry);
+$result=mysqli_query($conn,$qry);
 
 if($result)
 while($row=mysqli_fetch_assoc($result))
