@@ -54,7 +54,7 @@ else
 }
 ?>
 <div class=" col-md-10 mt-10">
-<button class="w3-button w3-light-grey w3-padding-large w3-section"><a href="index.html">
+<button class="w3-button w3-light-grey w3-padding-large w3-section"><a href="index.php">
       <i class="fa fa-download"></i>BACK
 </a>
 </button>
