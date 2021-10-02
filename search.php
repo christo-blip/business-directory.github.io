@@ -18,7 +18,7 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
  $department=$_POST['n3'];
  $connnn=pg_connect("host=ec2-34-197-135-44.compute-1.amazonaws.com port=5432 dbname=df8nph1anbqvgr user=ezoxlxirewtvup password=098e2f12b2351fd9d42391d4c031c7ec2ae8edcd630abdb1546f3cc4b029586a");
  //$connnn=pg_connect("ec2-34-197-135-44.compute-1.amazonaws.com","ezoxlxirewtvup","098e2f12b2351fd9d42391d4c031c7ec2ae8edcd630abdb1546f3cc4b029586a","df8nph1anbqvgr"); 
- $qry="SELECT 'person',phonenumber,department,'address','dd_time',photo FROM public.business_directory WHERE department in('$department')";
+ $qry="SELECT person,phonenumber,department,address,dd_time,photo FROM public.business_directory WHERE department in('$department')";
 $result=pg_query($connnn,$qry);
 
 if($result)
