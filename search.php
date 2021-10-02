@@ -19,12 +19,12 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
 <?php
  
 $Department=$_POST['n3'];
- $conn=mysqli_connect("sql202.epizy.com","epiz_29875343","x4ZH4zkcoTnab7G","epiz_29875343_test");
-$qry="SELECT Name,Phonenumber,Department,Address,Time,Photo FROM business_directory WHERE Department in('$Department')";
-$result=mysqli_query($conn,$qry);
+ $con=pg_connect ("ec2-34-197-135-44.compute-1.amazonaws.com","ezoxlxirewtvup","098e2f12b2351fd9d42391d4c031c7ec2ae8edcd630abdb1546f3cc4b029586a","df8nph1anbqvgr"); 
+ $qry="SELECT Name,Phonenumber,Department,Address,Time,Photo FROM business_directory WHERE Department in('$Department')";
+$result=pg_query($con,$qry);
 
 if($result)
-while($row=mysqli_fetch_assoc($result))
+while($row=pg_fetch_assoc($result))
 {
   	?>
       
